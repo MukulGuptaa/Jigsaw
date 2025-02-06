@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d43f626d9b5f4d729097092ded48bdb, type: 3}
+  m_Name: UIEffectProjectSettings
+  m_EditorClassIdentifier: 
+  m_TransformSensitivity: 1
+  m_RuntimePresets:
+  - {fileID: 8631011176588130669, guid: 25dcf286447f740bd8095cf4c6599176, type: 3}
+  m_UseHDRColorPicker: 1
+  m_ShaderVariantCollection: {fileID: 0}
+  m_ShaderVariantRegistry:
+    m_OptionalShaders: []
+    m_Asset: {fileID: 8589429437074395090}
+    m_ErrorOnUnregisteredVariant: 0
+    m_UnregisteredVariants: []
+--- !u!200 &8589429437074395090
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShaderVariants
+  m_Shaders:
+  - first: {fileID: 4800000, guid: 96246b1ead49a4c5a996fd477bc5a117, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: EDGE_COLOR_REPLACE EDGE_PLAIN
+        passType: 0
+      - keywords: EDGE_COLOR_REPLACE EDGE_SHINY
+        passType: 0
+      - keywords: EDGE_COLOR_REPLACE EDGE_SHINY TRANSITION_COLOR_MULTIPLY_ADDITIVE
+          TRANSITION_SHINY
+        passType: 0
+      - keywords: SHADOW_COLOR_REPLACE
+        passType: 0
+      - keywords: TRANSITION_BURN TRANSITION_COLOR_MULTIPLY_ADDITIVE
+        passType: 0
+      - keywords: TRANSITION_COLOR_ADDITIVE TRANSITION_SHINY
+        passType: 0
+      - keywords: TRANSITION_COLOR_MULTIPLY_ADDITIVE TRANSITION_SHINY
+        passType: 0
+      - keywords: TRANSITION_COLOR_MULTIPLY_LUMINANCE TRANSITION_SHINY
+        passType: 0
+      - keywords: TRANSITION_COLOR_REPLACE TRANSITION_MELT
+        passType: 0
