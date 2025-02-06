@@ -6,7 +6,7 @@ A Unity-based jigsaw puzzle game where players can drag and drop pieces to compl
 
 - Drag and drop puzzle pieces
 - Progress saving
-- Visual and haptic feedback
+- Visual effects, sound effects and haptic feedback
 - Persistent game state
 - UI animations and effects
 
