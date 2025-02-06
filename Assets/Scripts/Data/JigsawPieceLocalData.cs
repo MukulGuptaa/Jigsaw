@@ -1,20 +1,22 @@
-using System;
 
-namespace DataManagers
+namespace Data
 {
+    /// <summary>
+    /// Class that keeps data for individual jigsaw pieces.
+    /// </summary>
     public class JigsawPieceLocalData
     {
-        public int id;
-        public bool isPlacedSuccessfully;
+        public int ID;
+        public bool IsPlacedSuccessfully;
 
         public JigsawPieceLocalData(int id)
         {
-            this.id = id;
+            this.ID = id;
         }
 
         public void SetPiecePlacedSuccessfully()
         {
-            isPlacedSuccessfully = true;
+            IsPlacedSuccessfully = true;
         }
         
     }

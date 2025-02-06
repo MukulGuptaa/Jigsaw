@@ -2,6 +2,9 @@ using System;
 
 namespace Util
 {
+    /// <summary>
+    /// Game Events class that holds the different events
+    /// </summary>
     public class GameEvents
     {
         public static Action OnFileReadComplete;

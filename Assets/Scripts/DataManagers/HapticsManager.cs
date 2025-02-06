@@ -1,23 +1,26 @@
 using UnityEngine;
 using Util;
 
-public class HapticsManager : MonoBehaviour
+namespace DataManagers
 {
-    private void Awake()
+    public class HapticsManager : MonoBehaviour
     {
-        GameEvents.OnJigsawPiecePlacementSuccess += i => PlayHaptics();
-        GameEvents.OnJigsawPiecePlacementFailed += PlayHaptics;
-    }
+        private void Awake()
+        {
+            GameEvents.OnJigsawPiecePlacementSuccess += i => PlayHaptics();
+            GameEvents.OnJigsawPiecePlacementFailed += PlayHaptics;
+        }
 
-    private void OnDestroy()
-    {
-        GameEvents.OnJigsawPiecePlacementSuccess -= i => PlayHaptics();
-        GameEvents.OnJigsawPiecePlacementFailed -= PlayHaptics;
-    }
+        private void OnDestroy()
+        {
+            GameEvents.OnJigsawPiecePlacementSuccess -= i => PlayHaptics();
+            GameEvents.OnJigsawPiecePlacementFailed -= PlayHaptics;
+        }
 
-    private void PlayHaptics()
-    {
-        Handheld.Vibrate();
-    }
+        private void PlayHaptics()
+        {
+            Handheld.Vibrate();
+        }
     
+    }
 }

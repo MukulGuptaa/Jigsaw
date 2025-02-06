@@ -4,6 +4,9 @@ using Util;
 
 namespace UI
 {
+    /// <summary>
+    /// ScreenManager class that manages the screen to be shown next.
+    /// </summary>
     public class ScreenManager : MonoBehaviour
     {
         #region GAMEOBJECT_REFERENCES
@@ -25,6 +28,9 @@ namespace UI
             GameEvents.OnFileReadComplete -= ShowScreenPostReadOperationComplete;
         }
 
+        /// <summary>
+        /// Called post the initial read operation from local files is complete.
+        /// </summary>
         private void ShowScreenPostReadOperationComplete()
         {
             var screen = Instantiate(jigsawGameboardScreen, canvasTransform);

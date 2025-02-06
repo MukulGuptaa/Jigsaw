@@ -1,14 +1,16 @@
-using System;
 using System.Collections.Generic;
 using DataManagers;
 using Util;
 
 namespace Data
 {
+    /// <summary>
+    /// This is the class that keeps the data related to a particular level of the game.
+    /// </summary>
     public class JigsawLevelData
     {
-        public List<JigsawPieceLocalData> PiecesData;
-        public bool IsLevelComplete;
+        public List<JigsawPieceLocalData> PiecesData; // List of pieces data
+        public bool IsLevelComplete; // bool flag to tell whether this level is completed
 
         public JigsawLevelData()
         {
@@ -24,7 +26,7 @@ namespace Data
         public void CheckAndUpdateLevelComplete()
         {
             for (int i = 0; i < PiecesData.Count; i++) {
-                if (!PiecesData[i].isPlacedSuccessfully) {
+                if (!PiecesData[i].IsPlacedSuccessfully) {
                     return;
                 }
             }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using DataManagers;
 using UnityEngine;
@@ -6,6 +5,9 @@ using Util;
 
 namespace UI
 {
+    /// <summary>
+    /// Main script that is attached to the jigsaw gameboard.
+    /// </summary>
     public class JigsawGameboardScreen : MonoBehaviour
     {
         #region GAMEOBJECT_REFERENCES
@@ -51,7 +53,7 @@ namespace UI
                     var jigsawPiece = Instantiate(draggableJigsawPiece, transform).GetComponent<DraggableJigsawPiece>();
                     _draggableJigsawPiecesList.Add(jigsawPiece);
                 }
-                _draggableJigsawPiecesList[index].Initialize(piecesUiData[index], pieceData.isPlacedSuccessfully, pieceData.id);
+                _draggableJigsawPiecesList[index].Initialize(piecesUiData[index], pieceData.IsPlacedSuccessfully, pieceData.ID);
             }
 
             CheckAndShowReplaySection();

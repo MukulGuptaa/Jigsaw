@@ -55,6 +55,11 @@ namespace DataManagers
         #endregion
         /*-------------------------------------------------------------------------*/
 
+        /// <summary>
+        /// Method is called when the jigsaw piece is placed successfully at its final position.
+        /// Here we are updating the data for that piece in the data fields and also checking if the current level is completed.
+        /// </summary>
+        /// <param name="id"></param>
         private void OnJigsawPiecePlacementSuccess(int id)
         {
             int currentLevelNo = GetCurrentJigsawLevel();
@@ -110,6 +115,10 @@ namespace DataManagers
             return _jigsawLevelData.ContainsKey(currentLevel) && _jigsawLevelData[currentLevel].IsLevelComplete;
         }
 
+        /// <summary>
+        /// Called when we want to reset the data for the current level.
+        /// Here we are simply removing the key corresponding to the level and then adding a new entry with that key with default values.
+        /// </summary>
         public void ResetCurrentLevel()
         {
             int currentLevel = GetCurrentJigsawLevel();

@@ -4,6 +4,9 @@ using Util;
 
 namespace DataManagers
 {
+    /// <summary>
+    /// Game manager class responsible for initial read operation from the local file and also saves the data in local files.
+    /// </summary>
     public class GameManager : MonoBehaviour
     {
         #region SINGELTON

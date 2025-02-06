@@ -7,6 +7,10 @@ using Util;
 
 namespace UI
 {
+    /// <summary>
+    /// Monobehaviour script that is attached to the draggable piece prefab.
+    /// We instantiate the prefab at the runtime whenever the gameboard is spawned.
+    /// </summary>
     public class DraggableJigsawPiece : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
 
@@ -26,13 +30,14 @@ namespace UI
         #endregion
         /*-------------------------------------------------------------------------*/
     
-    
+        
         public void OnBeginDrag(PointerEventData eventData)
         {
             if (_uiData.isPlacedSuccessfully) {
                 return;
             }
 
+            // Adding canvas to show the piece at the top,
             _canvas = gameObject.AddComponent<Canvas>();
             _canvas.overrideSorting = true;
             _canvas.sortingOrder = 2;
@@ -85,6 +90,10 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Plays the shine effect on the piece when it is placed successfully in its final position.
+        /// </summary>
+        /// <returns></returns>
         private IEnumerator PlayShineEffect()
         {
             var uiEffect = gameObject.AddComponent<UIEffect>();
